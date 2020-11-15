@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% include 'navbar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .palle{
+            text-align : center;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <div class="container jumbotron">
+
+    <h1>welcome to new student registration</h1>
+    <form action="registration" method="post">
+        {% csrf_token %}
+      <div class="form-group">
+        <label for="formGroupExampleInput">enter name</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" name="userName">
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">enter email</label>
+        <input type="email" class="form-control" id="formGroupExampleInput2" name="userEmail" >
+      </div>
+          <div class="form-group">
+        <label for="formGroupExampleInput">enter pw</label>
+        <input type="password" class="form-control" id="formGroupExampleInput3" name="userPassword" >
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">enter subject</label>
+        <input type="text" class="form-control" id="formGroupExampleInput4" name="userSubject" >
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">enter mobile num</label>
+        <input type="tel" class="form-control" id="formGroupExampleInput5" name="userMobile" >
+      </div>
+        <input type="submit" value="register" class="btn btn-danger"/><br>
+    </form>
+    </div>
+    </div>
+</body>
+</html>

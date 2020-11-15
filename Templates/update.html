@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% include 'navbar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>welcome to student update</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" value="{{data.name}}" name="userName"/><br>
+        <input type="email" value="{{data.email}}" name="userEmail"/><br>
+        <input type="password" value="{{data.pw}}" name="userPassword"/><br>
+        <input type="text" value="{{data.sub}}" name="userSubject"/><br>
+        <input type="tel" value="{{data.mobile}}" name="userMobile"/><br>
+        <input type="submit" value="update"/><br>
+    </form>
+</body>
+</html>
